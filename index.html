@@ -6,17 +6,19 @@
   <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
   <meta charset="UTF-8" /> 
   <meta http-equiv="content-type" content="application/vnd.hbbtv.xhtml+xml;" />
-  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./reacttv/css/main.css" />
+  <script src="./reacttv/lib/react.js"></script>
+  <script src="./reacttv/lib/react-dom.js"></script>
+  <!-- <script src="./reacttv/lib/browser.js"></script> -->
+  <!-- <script src="./reacttv/lib/jquery.js"></script> -->
+  <!-- <script src="./reacttv/lib/remarkable.js"></script> -->
 </head>
-<body>
+<body onload="initApp()">
   <div>
     <object id="appMan" type="application/oipfApplicationManager" style="width:0; height:0; position: absolute;" ></object>
     <object id="oipfcfg" type="application/oipfConfiguration" style="position: absolute;width: 0px; height: 0px"></object>
     <object id="capabilities" type="application/oipfCapabilities" style="position: absolute; width: 0px; height: 0px"></object>
     <object id="recorder" type="application/oipfRecordingScheduler" style="position: absolute;width: 0px; height: 0px"></object>
-    <object id="video" type="video/broadcast" style="position: absolute; overflow: visible;">
-    <object tabindex="-1" alt=" " class="firetv-svg-broadcastplayer" id="firetv-svg-broadcastplayer-7104369800602927" name="firetv-svg-broadcastplayer-7104369800602927" style="position: fixed; top: 0px; left: 0px; width: 1280px; height: 720px; min-width: 1px; min-height: 1px; transform-origin: 50% 50% 0px; visibility: inherit;" data="tv://?ccid=ccid:4&amp;rand=0.15839415636425358"></object>
-    </object>
   </div>
 
   <div id="container">
@@ -25,17 +27,18 @@
     </div>
   </div>
 <script>
-function initApp() {  
-  try {
-    Application = document.getElementById('appMan').getOwnerApplication(document);
-    Application.show();
-  } catch (e) {
-    // ignore
-  }  
-}
-</script>
+  function initApp() {  
+    try {
+      Application = document.getElementById('appMan').getOwnerApplication(document);
+      Application.show();
+    } catch (e) {
+      // ignore
+    }  
+  }
 
-<script type="text/javascript" src="./reacttv/js/CapVerifier.js"></script>
+  </script>
+
+<!-- <script type="text/javascript" src="./reacttv/js/CapVerifier.js"></script> -->
 <script type="text/javascript" src="./reacttv/js/main.js"></script>
 </body>
 </html>

@@ -3,3 +3,12 @@ body{
 	font-size: 12px;
 }
 
+img{
+	width:200px;
+	height:auto;
+}
+
+li{
+	display:block;
+	float:left;
+}
